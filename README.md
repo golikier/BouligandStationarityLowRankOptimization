@@ -6,4 +6,4 @@ This repository contains the Matlab code used to realize the numerical experimen
 
 (*) Files related to the check of the Hessian. The script CheckHessianLKB23.m calls the functions CheckHessian.m and CheckHessianLift.m.
 
-[BouligandStationarityLowRankOptimization.zip](https://github.com/user-attachments/files/15937877/BouligandStationarityLowRankOptimization.zip)
+[BouligandStationarityLowRankOptimization.zip](https://github.com/user-attachments/files/15937940/BouligandStationarityLowRankOptimization.zip)
