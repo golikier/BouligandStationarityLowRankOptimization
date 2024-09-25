@@ -12,6 +12,8 @@ The file [ERFDR.zip](https://github.com/user-attachments/files/17119095/ERFDR.zi
 
 The script ERFDR.m calls the function ERFDRinfo.m on the problem introduced in [LKB23, section 2.2]. The script ERFDRplot.m produces the figures.
 
+[LKB23] https://link.springer.com/article/10.1007/s10107-022-01851-2
+
 [OGA24] https://arxiv.org/abs/2201.03962v2
 
 [OA24] https://arxiv.org/abs/2409.12298
