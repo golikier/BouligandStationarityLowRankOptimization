@@ -1,24 +1,32 @@
 # BouligandStationarityLowRankOptimization
 
-This repository contains Matlab implementations of low-rank optimization methods.
+This repository contains Matlab implementations of the following low-rank optimization methods:
+- monotone PGD [OW25, Algorithm 4.2 with l = 0 or p = 1];
+- P2GD [SU15, Algorithm 3];
+- four classes of ERFD (whose iteration map is [OA24, Algorithm 3.1]), namely RFD [SU15, Algorithm 4] and CRFD [OA24, Definition 6.3] with each of the three cones from [OA24, Table 6.1];
+- P2GDR [OGA24, Definition 6.1];
+- P2GD-PGD [OGA24, Definition 7.1];
+- four classes of ERFDR [OA24, Algorithm 4.2], namely RFDR [OA23, Algorithm 3] and CRFDR [OA24, Definition 6.3] with each of the three cones from [OA24, Table 6.1];
+- HRTR [LKB23, Algorithm 1].
+It also contains Matlab code enabling to check the Hessian and the Matlab scripts used to realize the numerical experiment presented in [OGA24, section 8.3], which compares empirically monotone PGD, P2GD, RFD , P2GDR, P2GD-PGD, RFDR, and HRTR on the weighted low-rank approximation (WLRA) problem studied in [OGA24, section 8.2].
 
-The file [BouligandStationarityLowRankOptimization.zip](https://github.com/user-attachments/files/15937940/BouligandStationarityLowRankOptimization.zip) contains the Matlab code used to realize the numerical experiment presented in [OGA24, section 8.2], which compares monotone PGD [JKMW23, Algorithm 3.1 with m = 0], P2GD [SU15, Algorithm 3], P2GDR [OGA24, Algorithm 6.2], and HRTR [LKB23, Algorithm 1] on the problem introduced in [LKB23, section 2.2].
+Every Matlab function implements:
+- the iteration map if its name contains “map”;
+- the iterative method returning all iterates and function values generated over a prefixed number of iterations if its name contains “iterinfo”;
+- the running time needed to bring the function value below a prefixed threshold if its name contains “time”.
+These functions are called by the scripts Time_obj_WLRA.m and Time_obj_WLRA_plot that generate respectively the tables and figures presented in [OGA24, section 8.3]; the data of the problem studied therein
 
-(*) Files related to the numerical experiment. The script PGDvsP2GDvsP2GDR.m calls the functions PGDinfo.m and P2GDRinfo.m, and produces the file PGDvsP2GDvsP2GDR_LKB23.mat. The script HRTR_LKB23.m calls the function HRTRinfo.m, and produces the file HRTR_LKB23.mat. The script PGDvsP2GDvsP2GDRvsHRTR.m produces the figures.
-
-(*) Files related to the check of the Hessian. The script CheckHessianLKB23.m calls the functions CheckHessian.m and CheckHessianLift.m.
-
-The file [ERFDR.zip](https://github.com/user-attachments/files/17119095/ERFDR.zip) contains Octave implementations of four subclasses of ERFDR [OA24, Algorithm 4.2]: RFDR and CRFDR with each of the three cones from [OA24, Table 6.1].
-
-The script ERFDR.m calls the function ERFDRinfo.m on the problem introduced in [LKB23, section 2.2]. The script ERFDRplot.m produces the figures.
+The script CheckHessianLKB23.m calls the functions CheckHessian.m and CheckHessianLift.m.
 
 References
 
-[SU15] https://epubs.siam.org/doi/abs/10.1137/140957822
+[SU15] https://doi.org/10.1137/140957822
 
-[JKMW23] https://link.springer.com/article/10.1007/s10107-022-01870-z
+[LKB23] https://link.springer.com/article/10.1007/s10107-022-01851
 
-[LKB23] https://link.springer.com/article/10.1007/s10107-022-01851-2
+[OA23] https://doi.org/10.1137/22M1518256
+
+[OW25] https://doi.org/10.1137/24M1692782
 
 [OGA24] https://arxiv.org/abs/2201.03962v2
 
