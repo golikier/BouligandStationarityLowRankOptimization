@@ -30,6 +30,6 @@ References
 
 [OW25] https://doi.org/10.1137/24M1692782
 
-[OGA26] https://arxiv.org/abs/2201.03962v3
+[OGA26] https://doi.org/10.1287/moor.2024.0582
 
 [OA24] https://arxiv.org/abs/2409.12298
