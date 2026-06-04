@@ -134,6 +134,8 @@ else
         B = s_bar*s_bar;
         [U, R1, P1] = qr([U U_bar], 'econ', 'vector');
         [V, R2, P2] = qr([V V_bar], 'econ', 'vector');
+        P1(P1) = 1:length(P1);
+        P2(P2) = 1:length(P2);
         Utilde = U*R1(:, P1);
         U_new = Utilde.*[s a*s_bar];
         Vtilde = V*R2(:, P2);
